@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Saludo from './components/Saludo'
 import Tarjeta from './components/Tarjeta'
 import FormularioUsuario from './components/FormularioUsuario'
+import Formulario from './components/ejercicios/formulario'
 
 const App = () => {
   return (
@@ -43,6 +44,8 @@ const App = () => {
 
         </div>
         <FormularioUsuario />
+
+        <Formulario />
         </main>
     </div>
     

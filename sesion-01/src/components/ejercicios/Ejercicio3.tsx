@@ -25,7 +25,7 @@ const Ejercicio3 = () => {
     <>
       <div>Ejercicio3</div>
       <p>Introduce tu nombre: </p>
-      <input value={usuario.nombre} onChange={(e)=>{actualizarCampo("nombre",e.target.value)}}   />
+      <input value={usuario.nombre} onChange={(e)=>{actualizarCampo("nombre",e.target.value)}}/>
     </>
   )
 }
