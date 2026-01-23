@@ -1,0 +1,32 @@
+import { Route, Routes } from "react-router-dom"
+
+import Home from "./pages/Home"
+
+import Saludo from "./components/Saludo"
+import NotFound from "./components/NotFound"
+import Header from "./components/Header"
+import { lazy, Suspense } from "react"
+//importar about con lazy loading
+const About = lazy(()=> import("./components/About"))
+
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-slate-50">
+      <Header />
+      
+      <main className="max-w-4xl mx-auto mt-10 bg-white shadow-md border-slate-200 min-h-[400px]">
+        <Suspense fallback={<h2>Cargando la app</h2>}>
+          <Routes>
+            <Route path ="/" element={<Home />}/>
+            <Route path ="/saludo/:nombre" element={<Saludo />}/>
+            <Route path ="/about" element={<About />}/>
+            <Route path ="*" element={<NotFound />}/>
+          </Routes>
+        </Suspense>
+      </main>
+    </div>
+  )
+}
+
+export default App

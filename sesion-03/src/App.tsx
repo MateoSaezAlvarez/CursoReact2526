@@ -3,6 +3,7 @@ import PlatosList from './components/PlatosList'
 import Header from './components/Header'
 import LoadingFallback from './components/LoadingFallback'
 import { fetchPlatos } from './utils/api'
+import BuscarPlato from './components/BuscarPlato'
 
 const App = () => {
   //hooks
@@ -18,7 +19,7 @@ const App = () => {
               <LoadingFallback message="Cocinando platos para ti (let me cook) 🍽️"/>
             }
           >
-            <BuscarPlato />
+            {<BuscarPlato />}
             <PlatosList platosPromise = {platosPromise} />
           </Suspense>
         </main>
